@@ -33,6 +33,10 @@ donc l'image Nginx est supprimée localement
 
 
 ##conteneurs##
+
+
+
+
 ``
 docker run image:Lancer un conteneur
 exemple: docker run debian
