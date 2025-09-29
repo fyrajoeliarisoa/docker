@@ -153,6 +153,44 @@ docker run -tid --name test --env MYVAR=123 ubuntu
 --env MYVAR=123 : définit la variable d'environnement MYVAR avec la valeur 123
 
 ubuntu : image utilisée (version standard Ubuntu)
+``
+
+
+##Nettoyage rapide##
+
+``
+
+docker rm -f $(docker ps -aq)      # Supprimer tous les conteneurs
+docker rmi -f $(docker images -q)  # Supprimer toutes les images
+
+Exemple
+docker rm -f $(docker ps -aq)
+
+docker ps -aq liste tous les conteneurs, actifs et inactifs, en ne retournant que leurs IDs.
+
+docker rm -f force la suppression de ces conteneurs, les arrêtant si nécessaire avant de les supprimer
+
+
+``
+
+
+##Volumes##
+
+``
+Création de volume simple:
+docker volume create mynginx
+docker volume ls
+``
+``
+un volume avec un conteneur
+docker run -itd -p 8080:80 -v mynginx:/usr/share/nginx/html --name c1 nginx
+
+``
+``
+Inspecter un volume :
+docker volume inspect mynginx
+
+``
 
 
 
