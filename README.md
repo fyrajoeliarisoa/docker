@@ -160,8 +160,8 @@ ubuntu : image utilisée (version standard Ubuntu)
 
 ``
 
-docker rm -f $(docker ps -aq)      # Supprimer tous les conteneurs
-docker rmi -f $(docker images -q)  # Supprimer toutes les images
+docker rm -f $(docker ps -aq)      : Supprimer tous les conteneurs
+docker rmi -f $(docker images -q)  : Supprimer toutes les images
 
 Exemple
 docker rm -f $(docker ps -aq)
