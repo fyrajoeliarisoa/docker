@@ -133,3 +133,26 @@ Une fois supprimé, le conteneur ne peut plus être redémarré, sauf à recrée
 ``
 
 
+``
+Variables d’environnement
+
+docker run -tid --name test --env MYVAR=123 ubuntu
+docker exec -ti test env : Vérifier la variable dans le conteneur
+
+Exemple:
+docker run -tid --name test --env MYVAR=123 ubuntu
+-t : alloue un pseudo-terminal
+
+-i : garde l'entrée standard ouverte
+
+-d : lance le conteneur en arrière-plan (détaché)
+
+--name test : nomme le conteneur "test"
+
+--env MYVAR=123 : définit la variable d'environnement MYVAR avec la valeur 123
+
+ubuntu : image utilisée (version standard Ubuntu)
+
+
+
+
