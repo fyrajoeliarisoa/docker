@@ -79,7 +79,16 @@ Exemple : docker restart monconteneur
 ``
 
 
+##Gestion des conteneurs##
+``
+docker stop web 
+Stopper un conteneur
+Exemple:
+docker stop web : arrêter proprement le conteneur nommé "web" avec délai d'attente par défaut.
 
+docker stop -t 20 web : arrêter avec un délai personnalisé de 20 secondes.
 
+docker stop container1 container2 : arrêter plusieurs conteneurs en même temps.
+``
 
 
