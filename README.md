@@ -114,6 +114,19 @@ docker start web : redémarre le conteneur "web" en arrière-plan.
 docker start --attach web : redémarre et affiche la sortie dans la console.
 
 ``
+``
+docker rm -f web :Supprimer un conteneur
 
+
+Exemple:
+docker rm -f web
+
+La commande docker rm sert à supprimer un conteneur qui est arrêté.
+
+L'option -f (force) arrête le conteneur s'il est en cours d'exécution, puis le supprime immédiatement.
+
+Une fois supprimé, le conteneur ne peut plus être redémarré, sauf à recréer un nouveau conteneur à partir de l'image Docker.
+
+``
 
 
