@@ -176,16 +176,19 @@ docker rm -f force la suppression de ces conteneurs, les arrêtant si nécessair
 
 ##Volumes##
 
+
 ``
 Création de volume simple:
 docker volume create mynginx
 docker volume ls
 ``
+
 ``
 un volume avec un conteneur
 docker run -itd -p 8080:80 -v mynginx:/usr/share/nginx/html --name c1 nginx
 
 ``
+
 ``
 Inspecter un volume :
 docker volume inspect mynginx
